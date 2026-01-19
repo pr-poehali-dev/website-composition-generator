@@ -9,8 +9,11 @@ import CatalogPage from './pages/CatalogPage';
 import CartPage from './pages/CartPage';
 import ProfilePage from './pages/ProfilePage';
 import ContactsPage from './pages/ContactsPage';
+import AdminPage from './pages/AdminPage';
 import NotFound from "./pages/NotFound";
 import Icon from '@/components/ui/icon';
+import AuthModal from '@/components/AuthModal';
+import { Button } from '@/components/ui/button';
 
 const queryClient = new QueryClient();
 
@@ -22,7 +25,7 @@ interface CartItem {
   image: string;
 }
 
-function Navigation({ cartCount }: { cartCount: number }) {
+function Navigation({ cartCount, onAuthClick, userEmail }: { cartCount: number; onAuthClick: () => void; userEmail: string | null }) {
   const location = useLocation();
   
   const isActive = (path: string) => location.pathname === path;
@@ -32,8 +35,8 @@ function Navigation({ cartCount }: { cartCount: number }) {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center gap-2 font-bold text-xl text-primary">
-            <Icon name="Leaf" size={28} />
-            <span className="font-montserrat">EcoShop</span>
+            <Icon name="Droplets" size={28} />
+            <span className="font-montserrat">АкваСтиль</span>
           </Link>
           
           <div className="hidden md:flex items-center gap-8">
@@ -55,15 +58,30 @@ function Navigation({ cartCount }: { cartCount: number }) {
             >
               Контакты
             </Link>
+            {userEmail && (
+              <Link 
+                to="/admin" 
+                className={`transition-colors ${isActive('/admin') ? 'text-primary font-medium' : 'text-muted-foreground hover:text-foreground'}`}
+              >
+                Админ
+              </Link>
+            )}
           </div>
           
           <div className="flex items-center gap-4">
-            <Link 
-              to="/profile" 
-              className={`p-2 rounded-full transition-colors ${isActive('/profile') ? 'bg-primary text-primary-foreground' : 'hover:bg-muted'}`}
-            >
-              <Icon name="User" size={20} />
-            </Link>
+            {userEmail ? (
+              <Link 
+                to="/profile" 
+                className={`p-2 rounded-full transition-colors ${isActive('/profile') ? 'bg-primary text-primary-foreground' : 'hover:bg-muted'}`}
+              >
+                <Icon name="User" size={20} />
+              </Link>
+            ) : (
+              <Button onClick={onAuthClick} variant="outline" size="sm">
+                <Icon name="LogIn" size={18} className="mr-2" />
+                Войти
+              </Button>
+            )}
             <Link 
               to="/cart" 
               className={`relative p-2 rounded-full transition-colors ${isActive('/cart') ? 'bg-primary text-primary-foreground' : 'hover:bg-muted'}`}
@@ -84,6 +102,12 @@ function Navigation({ cartCount }: { cartCount: number }) {
 
 function AppContent() {
   const [cart, setCart] = useState<CartItem[]>([]);
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
+  const [userEmail, setUserEmail] = useState<string | null>(null);
+  
+  const handleLogin = (email: string) => {
+    setUserEmail(email);
+  };
   
   const addToCart = (item: Omit<CartItem, 'quantity'>) => {
     setCart(prev => {
@@ -117,7 +141,16 @@ function AppContent() {
   
   return (
     <>
-      <Navigation cartCount={cartCount} />
+      <AuthModal 
+        isOpen={isAuthModalOpen} 
+        onClose={() => setIsAuthModalOpen(false)}
+        onLogin={handleLogin}
+      />
+      <Navigation 
+        cartCount={cartCount} 
+        onAuthClick={() => setIsAuthModalOpen(true)}
+        userEmail={userEmail}
+      />
       <Routes>
         <Route path="/" element={<HomePage addToCart={addToCart} />} />
         <Route path="/catalog" element={<CatalogPage addToCart={addToCart} />} />
@@ -134,6 +167,7 @@ function AppContent() {
         />
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/contacts" element={<ContactsPage />} />
+        <Route path="/admin" element={<AdminPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>

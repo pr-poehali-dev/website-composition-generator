@@ -14,42 +14,42 @@ interface Product {
 const featuredProducts: Product[] = [
   {
     id: 1,
-    name: 'Органическое мыло с лавандой',
-    price: 450,
-    image: 'https://cdn.poehali.dev/projects/373e02e7-4370-44b1-a786-1b2a191623b0/files/6f6c24ae-81bb-4a6d-ab01-a15752df5793.jpg',
-    category: 'Уход за телом'
+    name: 'Смеситель для раковины хром',
+    price: 4500,
+    image: 'https://cdn.poehali.dev/projects/373e02e7-4370-44b1-a786-1b2a191623b0/files/a08244ba-8256-4991-93be-e3301241a0bd.jpg',
+    category: 'Смесители'
   },
   {
     id: 2,
-    name: 'Натуральный крем для лица',
-    price: 890,
-    image: 'https://cdn.poehali.dev/projects/373e02e7-4370-44b1-a786-1b2a191623b0/files/b89f021a-f0ff-49be-8359-7892a06d2cc1.jpg',
-    category: 'Уход за лицом'
+    name: 'Раковина керамическая белая',
+    price: 8900,
+    image: 'https://cdn.poehali.dev/projects/373e02e7-4370-44b1-a786-1b2a191623b0/files/48133cdb-c7d4-42e0-ae80-34093d47cd20.jpg',
+    category: 'Раковины'
   },
   {
     id: 3,
-    name: 'Эко-набор косметики',
-    price: 1590,
-    image: 'https://cdn.poehali.dev/projects/373e02e7-4370-44b1-a786-1b2a191623b0/files/36ea9bb3-323d-4285-b812-a7fba3ebcee0.jpg',
-    category: 'Наборы'
+    name: 'Душевая лейка тропический душ',
+    price: 6500,
+    image: 'https://cdn.poehali.dev/projects/373e02e7-4370-44b1-a786-1b2a191623b0/files/f0bb65fb-5956-4935-b487-06257d6c4ed2.jpg',
+    category: 'Душевые системы'
   }
 ];
 
 const benefits = [
   {
-    icon: 'Leaf',
-    title: '100% натуральные',
-    description: 'Только органические ингредиенты без химии'
+    icon: 'Shield',
+    title: 'Гарантия качества',
+    description: 'Официальная гарантия на всю сантехнику'
   },
   {
-    icon: 'Heart',
-    title: 'Забота о природе',
-    description: 'Экологичная упаковка и производство'
+    icon: 'Droplets',
+    title: 'Проверенные бренды',
+    description: 'Работаем только с надежными производителями'
   },
   {
     icon: 'Award',
     title: 'Сертифицировано',
-    description: 'Международные сертификаты качества'
+    description: 'Вся продукция имеет необходимые сертификаты'
   },
   {
     icon: 'Truck',
@@ -69,11 +69,11 @@ export default function HomePage({ addToCart }: HomePageProps) {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center animate-fade-in">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-foreground">
-              Натуральная косметика для вашей красоты
+              Сантехника премиум-класса для вашего дома
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-8">
-              Откройте для себя силу природы с нашей коллекцией органической косметики. 
-              Экологично, эффективно, этично.
+              Широкий выбор качественной сантехники от ведущих производителей. 
+              Стиль, надежность, комфорт.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/catalog">
@@ -171,10 +171,10 @@ export default function HomePage({ addToCart }: HomePageProps) {
       <section className="py-16 md:py-24 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Присоединяйтесь к эко-движению
+            Подпишитесь на рассылку
           </h2>
           <p className="text-lg mb-8 opacity-90 max-w-2xl mx-auto">
-            Получите скидку 10% на первый заказ при подписке на нашу рассылку
+            Получите скидку 10% на первый заказ и узнавайте первыми о новинках
           </p>
           <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
             <input 

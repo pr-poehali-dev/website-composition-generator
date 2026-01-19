@@ -17,79 +17,79 @@ interface Product {
 const allProducts: Product[] = [
   {
     id: 1,
-    name: 'Органическое мыло с лавандой',
-    price: 450,
-    image: 'https://cdn.poehali.dev/projects/373e02e7-4370-44b1-a786-1b2a191623b0/files/6f6c24ae-81bb-4a6d-ab01-a15752df5793.jpg',
-    category: 'Уход за телом',
-    description: 'Натуральное мыло ручной работы с эфирным маслом лаванды'
+    name: 'Смеситель для раковины хром',
+    price: 4500,
+    image: 'https://cdn.poehali.dev/projects/373e02e7-4370-44b1-a786-1b2a191623b0/files/a08244ba-8256-4991-93be-e3301241a0bd.jpg',
+    category: 'Смесители',
+    description: 'Однорычажный смеситель с керамическим картриджем'
   },
   {
     id: 2,
-    name: 'Натуральный крем для лица',
-    price: 890,
-    image: 'https://cdn.poehali.dev/projects/373e02e7-4370-44b1-a786-1b2a191623b0/files/b89f021a-f0ff-49be-8359-7892a06d2cc1.jpg',
-    category: 'Уход за лицом',
-    description: 'Увлажняющий крем с гиалуроновой кислотой и алоэ вера'
+    name: 'Раковина керамическая белая',
+    price: 8900,
+    image: 'https://cdn.poehali.dev/projects/373e02e7-4370-44b1-a786-1b2a191623b0/files/48133cdb-c7d4-42e0-ae80-34093d47cd20.jpg',
+    category: 'Раковины',
+    description: 'Накладная раковина из санфаянса 60х40 см'
   },
   {
     id: 3,
-    name: 'Эко-набор косметики',
-    price: 1590,
-    image: 'https://cdn.poehali.dev/projects/373e02e7-4370-44b1-a786-1b2a191623b0/files/36ea9bb3-323d-4285-b812-a7fba3ebcee0.jpg',
-    category: 'Наборы',
-    description: 'Подарочный набор из 5 органических средств для ухода'
+    name: 'Душевая лейка тропический душ',
+    price: 6500,
+    image: 'https://cdn.poehali.dev/projects/373e02e7-4370-44b1-a786-1b2a191623b0/files/f0bb65fb-5956-4935-b487-06257d6c4ed2.jpg',
+    category: 'Душевые системы',
+    description: 'Верхний душ с эффектом тропического дождя 25 см'
   },
   {
     id: 4,
-    name: 'Шампунь с кокосовым маслом',
-    price: 650,
-    image: 'https://cdn.poehali.dev/projects/373e02e7-4370-44b1-a786-1b2a191623b0/files/b89f021a-f0ff-49be-8359-7892a06d2cc1.jpg',
-    category: 'Уход за волосами',
-    description: 'Восстанавливающий шампунь для всех типов волос'
+    name: 'Унитаз подвесной',
+    price: 12900,
+    image: 'https://cdn.poehali.dev/projects/373e02e7-4370-44b1-a786-1b2a191623b0/files/48133cdb-c7d4-42e0-ae80-34093d47cd20.jpg',
+    category: 'Унитазы',
+    description: 'Подвесной унитаз с системой безободкового смыва'
   },
   {
     id: 5,
-    name: 'Бальзам для губ с пчелиным воском',
-    price: 290,
-    image: 'https://cdn.poehali.dev/projects/373e02e7-4370-44b1-a786-1b2a191623b0/files/36ea9bb3-323d-4285-b812-a7fba3ebcee0.jpg',
-    category: 'Уход за губами',
-    description: 'Питательный бальзам с натуральным воском и маслами'
+    name: 'Смеситель для ванны с душем',
+    price: 7200,
+    image: 'https://cdn.poehali.dev/projects/373e02e7-4370-44b1-a786-1b2a191623b0/files/a08244ba-8256-4991-93be-e3301241a0bd.jpg',
+    category: 'Смесители',
+    description: 'Двухрычажный смеситель с душевой лейкой и шлангом'
   },
   {
     id: 6,
-    name: 'Скраб для тела с кофе',
-    price: 550,
-    image: 'https://cdn.poehali.dev/projects/373e02e7-4370-44b1-a786-1b2a191623b0/files/6f6c24ae-81bb-4a6d-ab01-a15752df5793.jpg',
-    category: 'Уход за телом',
-    description: 'Отшелушивающий скраб с молотым кофе и маслом ши'
+    name: 'Ванна акриловая 170х70',
+    price: 15900,
+    image: 'https://cdn.poehali.dev/projects/373e02e7-4370-44b1-a786-1b2a191623b0/files/48133cdb-c7d4-42e0-ae80-34093d47cd20.jpg',
+    category: 'Ванны',
+    description: 'Прямоугольная акриловая ванна с усиленным каркасом'
   },
   {
     id: 7,
-    name: 'Сыворотка с витамином С',
-    price: 1290,
-    image: 'https://cdn.poehali.dev/projects/373e02e7-4370-44b1-a786-1b2a191623b0/files/b89f021a-f0ff-49be-8359-7892a06d2cc1.jpg',
-    category: 'Уход за лицом',
-    description: 'Осветляющая сыворотка для сияния кожи'
+    name: 'Душевая кабина угловая',
+    price: 24900,
+    image: 'https://cdn.poehali.dev/projects/373e02e7-4370-44b1-a786-1b2a191623b0/files/f0bb65fb-5956-4935-b487-06257d6c4ed2.jpg',
+    category: 'Душевые системы',
+    description: 'Угловая душевая кабина 90хх90 см с поддоном'
   },
   {
     id: 8,
-    name: 'Маска для волос с арганой',
-    price: 790,
-    image: 'https://cdn.poehali.dev/projects/373e02e7-4370-44b1-a786-1b2a191623b0/files/36ea9bb3-323d-4285-b812-a7fba3ebcee0.jpg',
-    category: 'Уход за волосами',
-    description: 'Интенсивная восстанавливающая маска с аргановым маслом'
+    name: 'Смеситель для кухни',
+    price: 5800,
+    image: 'https://cdn.poehali.dev/projects/373e02e7-4370-44b1-a786-1b2a191623b0/files/a08244ba-8256-4991-93be-e3301241a0bd.jpg',
+    category: 'Смесители',
+    description: 'Кухонный смеситель с высоким изливом'
   },
   {
     id: 9,
-    name: 'Дезодорант с алоэ',
-    price: 420,
-    image: 'https://cdn.poehali.dev/projects/373e02e7-4370-44b1-a786-1b2a191623b0/files/6f6c24ae-81bb-4a6d-ab01-a15752df5793.jpg',
-    category: 'Уход за телом',
-    description: 'Натуральный дезодорант без алюминия и парабенов'
+    name: 'Раковина накладная круглая',
+    price: 7800,
+    image: 'https://cdn.poehali.dev/projects/373e02e7-4370-44b1-a786-1b2a191623b0/files/48133cdb-c7d4-42e0-ae80-34093d47cd20.jpg',
+    category: 'Раковины',
+    description: 'Круглая накладная раковина диаметром 42 см'
   }
 ];
 
-const categories = ['Все', 'Уход за лицом', 'Уход за телом', 'Уход за волосами', 'Уход за губами', 'Наборы'];
+const categories = ['Все', 'Смесители', 'Раковины', 'Душевые системы', 'Унитазы', 'Ванны'];
 
 interface CatalogPageProps {
   addToCart: (item: { id: number; name: string; price: number; image: string }) => void;
